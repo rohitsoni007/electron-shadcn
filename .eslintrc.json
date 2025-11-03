@@ -6,13 +6,10 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:import/electron",
-    "plugin:import/typescript",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -20,15 +17,43 @@
       "jsx": true
     },
     "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
+    "@typescript-eslint",
     "react",
     "react-hooks"
   ],
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
     }
-  }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/prop-types": "off"
+  },
+  "ignorePatterns": [
+    "dist/",
+    "out/",
+    "node_modules/",
+    ".vite/",
+    "*.config.ts",
+    "forge.config.ts",
+    "forge.env.d.ts",
+    "src/components/ui/calendar.tsx",
+    "src/components/ui/chart.tsx",
+    "src/components/ui/command.tsx",
+    "src/components/ui/sidebar.tsx"
+  ]
 }
