@@ -1,6 +1,6 @@
 {
   "name": "electron-shadcn",
-  "productName": "electron-shadcn-template",
+  "productName": "electron-shadcn",
   "version": "1.0.0",
   "description": "Electron Forge with shadcn/ui (Vite + Typescript)",
   "main": ".vite/build/main.js",

@@ -252,31 +252,15 @@ For production releases, you can set up code signing by adding these secrets to 
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on:
-
-- How to report issues and suggest features
-- Development setup and workflow
-- Code style guidelines and best practices
-- Pull request process and review guidelines
-
-### Quick Start for Contributors
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Follow our [coding standards](CONTRIBUTING.md#code-style-guidelines)
-4. Commit your changes using [conventional commits](CONTRIBUTING.md#commit-guidelines)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request with a clear description
-
-Please read our [Code of Conduct](CONTRIBUTING.md#code-of-conduct) to ensure a welcoming environment for all contributors.
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📋 Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes, new features, and improvements.
 
 ## 🙏 Acknowledgments
 
