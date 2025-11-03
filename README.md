@@ -2,6 +2,12 @@
 
 A modern Electron application template built with React, TypeScript, Vite, and shadcn/ui components. This template provides a solid foundation for building beautiful desktop applications with a complete UI component system and theme support.
 
+## 📸 Screenshot
+
+![Electron + shadcn/ui Template](media/screenshot.png)
+
+*Modern Electron application with shadcn/ui components, featuring theme toggle and responsive design*
+
 ## ✨ Features
 
 - **⚡ Electron** - Cross-platform desktop app framework
