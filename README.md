@@ -262,12 +262,6 @@ For production releases, you can set up code signing by adding these secrets to 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- [shadcn](https://github.com/shadcn) for the amazing UI components
-- [Electron Forge](https://www.electronforge.io/) for the build tooling
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-
 ---
 
 **Happy coding! 🚀**

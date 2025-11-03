@@ -37,11 +37,18 @@ jobs:
     - name: Build application
       run: npm run make
       
-    - name: List build output
+    - name: List build output (Unix)
+      if: runner.os != 'Windows'
       run: |
         echo "Build output structure:"
         find out -type f -name "*" 2>/dev/null || echo "No out directory found"
         ls -la out/ 2>/dev/null || echo "No out directory"
+        
+    - name: List build output (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        echo "Build output structure:"
+        if (Test-Path out) { Get-ChildItem -Recurse out | Select-Object FullName } else { echo "No out directory found" }
       
     - name: Upload artifacts (Windows)
       if: matrix.os == 'windows-latest'
