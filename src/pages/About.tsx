@@ -88,14 +88,15 @@ export default function About() {
                 <Badge variant="secondary">⚛️ React 19.2</Badge>
                 <Badge variant="secondary">🚀 Electron 39.0</Badge>
                 <Badge variant="secondary">🔷 TypeScript 5.3</Badge>
-                <Badge variant="secondary">⚡ Vite 5.4</Badge>
+                <Badge variant="secondary">🚀 Rolldown Vite 7.1.20</Badge>
                 <Badge variant="secondary">🎨 shadcn/ui</Badge>
                 <Badge variant="secondary">🎭 Tailwind 4.1.16</Badge>
-                <Badge variant="secondary">🛣️ React Router v7</Badge>
+                <Badge variant="secondary">🛣️ React Router v7.9</Badge>
                 <Badge variant="secondary">📝 Hook Form 7.66</Badge>
                 <Badge variant="secondary">✅ Zod 4.1</Badge>
-                <Badge variant="secondary">🔄 TanStack Query</Badge>
+                <Badge variant="secondary">🔄 TanStack Query 5.90</Badge>
                 <Badge variant="secondary">⚡ React Compiler</Badge>
+                <Badge variant="secondary">🎯 Lucide 0.552</Badge>
               </div>
             </CardContent>
           </Card>

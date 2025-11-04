@@ -14,25 +14,45 @@ A modern Electron application template built with React, TypeScript, Vite, and s
 - **⚡ Electron 39.0** - Cross-platform desktop app framework
 - **⚛️ React 19.2** - Modern React with latest features and concurrent rendering
 - **🔷 TypeScript 5.3** - Type-safe development with advanced type inference
-- **⚡ Vite 5.4** - Lightning-fast build tool and dev server with HMR
+- **🚀 Rolldown Vite 7.1.20** - Next-generation Rust-based bundler replacing traditional Vite for enhanced performance
 
 ### UI & Styling
-- **🎨 shadcn/ui** - Beautiful, accessible UI components built on Radix UI primitives
+- **🎨 shadcn/ui** - Complete component library with 50+ components built on Radix UI primitives
 - **🎭 Tailwind CSS 4.1.16** - Latest utility-first CSS framework with enhanced performance
-- **🌙 Theme Support** - Light, dark, and system theme modes with persistence
+- **🌙 Advanced Theme System** - Light, dark, and system theme modes with intelligent toggle and persistence
 - **📱 Responsive Design** - Mobile-first approach with Tailwind breakpoints
-- **🎯 Lucide React 0.552** - Beautiful, customizable SVG icons
+- **🎯 Lucide React 0.552** - Beautiful, customizable SVG icons (1000+ icons)
+- **🎨 CSS Variables** - Dynamic theming with CSS custom properties
+
+### Complete UI Component Set
+- **Layout Components**: Button, Card, Dialog, Sheet, Tabs, Accordion, Sidebar
+- **Form Controls**: Input, Label, Select, Checkbox, Radio Group, Switch, Slider, Textarea
+- **Navigation**: Navigation Menu, Breadcrumb, Pagination, Command Palette
+- **Feedback**: Alert, Toast, Progress, Skeleton, Sonner notifications
+- **Data Display**: Table, Avatar, Badge, Separator, Calendar, Charts (Recharts)
+- **Overlay Components**: Popover, Tooltip, Hover Card, Context Menu, Drawer
+- **Advanced Components**: Carousel, Resizable Panels, Input OTP, Date Picker
 
 ### State Management & Forms
-- **🔄 TanStack Query 5.90** - Powerful data fetching and caching library
-- **📝 React Hook Form 7.66** - Performant forms with easy validation
-- **✅ Zod 4.1** - TypeScript-first schema validation library
-- **🎛️ Class Variance Authority** - Type-safe component variants
+- **🔄 TanStack Query 5.90** - Powerful data fetching, caching, and synchronization
+- **📝 React Hook Form 7.66** - Performant forms with minimal re-renders
+- **✅ Zod 4.1** - TypeScript-first schema validation with runtime type checking
+- **🎛️ Class Variance Authority** - Type-safe component variants and styling
+- **🔗 Hookform Resolvers** - Seamless integration between forms and validation
 
 ### Routing & Navigation
-- **🧭 React Router v7.9** - Client-side routing with modern patterns
-- **📍 Nested Routes** - Hierarchical routing with layout components
-- **🔗 Type-safe Navigation** - Full TypeScript support for routes
+- **🧭 React Router v7.9** - Latest client-side routing with modern patterns
+- **📍 Nested Routes** - Hierarchical routing with layout components and error boundaries
+- **🔗 Type-safe Navigation** - Full TypeScript support for routes and parameters
+- **❌ Error Handling** - Comprehensive error boundaries with user-friendly error pages
+- **🎯 Active Route Detection** - Smart navigation highlighting and state management
+
+### Theme & Accessibility
+- **🌙 Multi-Theme Support** - Light, dark, and system preference detection
+- **🔄 Theme Toggle** - Intuitive cycling through theme modes with visual indicators
+- **♿ Accessibility First** - WCAG compliant components with proper ARIA attributes
+- **🎨 Design Tokens** - Consistent spacing, colors, and typography system
+- **📱 Responsive Breakpoints** - Mobile, tablet, and desktop optimized layouts
 
 ### Development Tools
 - **🔧 Electron Forge 7.10** - Complete build and packaging toolchain
@@ -41,6 +61,7 @@ A modern Electron application template built with React, TypeScript, Vite, and s
 - **🎯 Developer Experience** - Hot reload, TypeScript path mapping, and comprehensive linting
 - **🚀 GitHub Actions** - Automated CI/CD with cross-platform builds
 - **📋 Type Safety** - End-to-end TypeScript with strict configuration
+- **🔍 Path Aliases** - Clean imports with @ prefix for better code organization
 
 ## 🚀 Quick Start
 
@@ -100,21 +121,28 @@ src/
 
 This template includes a complete set of shadcn/ui components and modern libraries:
 
-### UI Components
-- **Layout**: Button, Card, Dialog, Sheet, Tabs, Accordion
-- **Forms**: Input, Label, Select, Checkbox, Radio Group, Switch, Slider
-- **Navigation**: Navigation Menu, Breadcrumb, Pagination, Command Palette
-- **Feedback**: Alert, Toast, Progress, Skeleton, Sonner notifications
-- **Data Display**: Table, Avatar, Badge, Separator, Calendar, Charts
-- **Overlay**: Popover, Tooltip, Hover Card, Context Menu, Drawer
+### Complete shadcn/ui Component Library (50+ Components)
+- **Layout & Structure**: Button, Card, Dialog, Sheet, Tabs, Accordion, Sidebar, Resizable Panels
+- **Form Controls**: Input, Textarea, Label, Select, Checkbox, Radio Group, Switch, Slider, Input OTP
+- **Navigation**: Navigation Menu, Breadcrumb, Pagination, Command Palette, Menubar
+- **Feedback & Status**: Alert, Alert Dialog, Toast, Progress, Skeleton, Sonner notifications
+- **Data Display**: Table, Avatar, Badge, Separator, Calendar, Charts (Recharts integration)
+- **Overlay & Interaction**: Popover, Tooltip, Hover Card, Context Menu, Drawer (Vaul)
+- **Advanced Components**: Carousel (Embla), Collapsible, Toggle, Toggle Group, Aspect Ratio
+- **Form Integration**: Form wrapper components with React Hook Form integration
 
-### Integrated Libraries
-- **React Hook Form** - Form state management with minimal re-renders
-- **Zod** - Runtime type validation and schema parsing
-- **TanStack Query** - Server state management and caching
-- **Lucide React** - Consistent icon system with 1000+ icons
-- **Tailwind Merge** - Intelligent class merging for dynamic styles
-- **Class Variance Authority** - Type-safe component variant system
+### Integrated Libraries & Tools
+- **React Hook Form 7.66** - Form state management with minimal re-renders and validation
+- **Zod 4.1** - Runtime type validation and schema parsing with TypeScript inference
+- **TanStack Query 5.90** - Server state management, caching, and background updates
+- **Lucide React 0.552** - Consistent icon system with 1000+ customizable SVG icons
+- **Tailwind Merge** - Intelligent class merging for dynamic styles and conditional classes
+- **Class Variance Authority** - Type-safe component variant system with IntelliSense
+- **Next Themes** - Advanced theme management with system preference detection
+- **Sonner** - Beautiful toast notifications with stacking and positioning
+- **Recharts** - Composable charting library for data visualization
+- **Embla Carousel** - Lightweight, extensible carousel with touch support
+- **Vaul** - Drawer component for mobile-first interactions
 
 ## ⚡ React Compiler
 
@@ -125,7 +153,7 @@ This template includes the React Compiler for automatic performance optimization
 - **Zero Configuration** - Works out of the box with your existing React code
 - **Better Performance** - Optimizes your components without code changes
 
-The React Compiler is configured in `vite.renderer.config.ts` and will automatically optimize your React components during the build process.
+The React Compiler is configured in `vite.renderer.config.mts` and will automatically optimize your React components during the build process.
 
 ## 🌙 Theme System
 
@@ -204,7 +232,7 @@ export default {
 
 ### Vite Configuration
 
-Modify build settings in `vite.renderer.config.ts`:
+Modify build settings in `vite.renderer.config.mjs`:
 
 ```ts
 export default defineConfig({
