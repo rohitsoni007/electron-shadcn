@@ -211,7 +211,7 @@ npx shadcn@latest add [component-name]
 
 ### Tailwind CSS v4
 
-Customize your design system in `tailwind.config.ts`:
+Customize your design system in `index.css`:
 
 ```ts
 import type { Config } from 'tailwindcss'
