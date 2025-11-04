@@ -13,7 +13,7 @@ A modern Electron application template built with React, TypeScript, Vite, and s
 ### Core Framework
 - **⚡ Electron 39.0** - Cross-platform desktop app framework
 - **⚛️ React 19.2** - Modern React with latest features and concurrent rendering
-- **🔷 TypeScript 5.3** - Type-safe development with advanced type inference
+- **🔷 TypeScript 5.9** - Type-safe development with advanced type inference
 - **🚀 Rolldown Vite 7.1.20** - Next-generation Rust-based bundler replacing traditional Vite for enhanced performance
 
 ### UI & Styling
@@ -57,11 +57,19 @@ A modern Electron application template built with React, TypeScript, Vite, and s
 ### Development Tools
 - **🔧 Electron Forge 7.10** - Complete build and packaging toolchain
 - **⚡ React Compiler** - Automatic React optimizations with babel-plugin-react-compiler
-- **📦 Modern Tooling** - ESLint 8.57, PostCSS 8.5, Autoprefixer 10.4
+- **📦 Modern Tooling** - ESLint 9.39 with flat config, Rolldown Vite bundler
 - **🎯 Developer Experience** - Hot reload, TypeScript path mapping, and comprehensive linting
 - **🚀 GitHub Actions** - Automated CI/CD with cross-platform builds
 - **📋 Type Safety** - End-to-end TypeScript with strict configuration
 - **🔍 Path Aliases** - Clean imports with @ prefix for better code organization
+
+### Testing & Quality Assurance
+- **🧪 Vitest 4.0** - Fast unit testing with native ES modules support
+- **🎭 Playwright 1.56** - End-to-end testing across multiple browsers
+- **💅 Prettier 3.6** - Consistent code formatting with automatic styling
+- **🔍 Testing Library** - React component testing utilities with user-centric queries
+- **📊 Coverage Reports** - Comprehensive test coverage analysis and reporting
+- **🎯 Multi-Browser E2E** - Chromium, Firefox, and WebKit testing support
 
 ## 🚀 Quick Start
 
@@ -90,11 +98,27 @@ A modern Electron application template built with React, TypeScript, Vite, and s
 
 ## 📦 Available Scripts
 
+### Development
 - `npm start` - Start the Electron app in development mode
+- `npm run lint` - Run ESLint with modern flat config
+- `npm run type-check` - Run TypeScript type checking
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
+
+### Testing
+- `npm run test` - Run unit tests with Vitest
+- `npm run test:watch` - Run unit tests in watch mode
+- `npm run test:ui` - Run unit tests with UI interface
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run test:e2e` - Run end-to-end tests with Playwright
+- `npm run test:e2e:ui` - Run E2E tests with interactive UI
+- `npm run test:e2e:headed` - Run E2E tests with visible browser
+
+### Build & Distribution
+- `npm run build` - Build the application
 - `npm run package` - Package the app for distribution
 - `npm run make` - Create distributable packages
 - `npm run publish` - Publish the app
-- `npm run lint` - Run ESLint
 
 ## 🏗️ Project Structure
 
@@ -111,10 +135,21 @@ src/
 │   ├── Home.tsx
 │   ├── About.tsx
 │   └── Settings.tsx
+├── test/               # Unit test setup and utilities
 ├── App.tsx             # Main App component
 ├── main.ts             # Electron main process
 ├── router.tsx          # React Router configuration
 └── index.css           # Global styles
+
+tests/
+└── e2e/                # End-to-end tests
+    └── example.spec.ts # Playwright E2E tests
+
+Configuration Files:
+├── eslint.config.mts   # ESLint 9 flat configuration
+├── playwright.config.ts # Playwright E2E test configuration
+├── vitest.config.ts    # Vitest unit test configuration
+└── .prettierrc         # Prettier formatting rules
 ```
 
 ## 🎨 UI Components
@@ -191,6 +226,75 @@ The template uses React Router v7 for navigation:
   path: "/my-page",
   element: <MyPage />,
 }
+```
+
+## 🧪 Testing
+
+This template includes a comprehensive testing setup with both unit and end-to-end testing capabilities.
+
+### Unit Testing with Vitest
+
+Vitest provides fast unit testing with native ES modules support:
+
+```tsx
+// src/test/example.test.tsx
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import MyComponent from '../components/MyComponent';
+
+describe('MyComponent', () => {
+  it('renders correctly', () => {
+    render(<MyComponent />);
+    expect(screen.getByText('Hello World')).toBeInTheDocument();
+  });
+});
+```
+
+**Features:**
+- **Fast execution** with native ES modules
+- **React Testing Library** integration
+- **jsdom environment** for DOM testing
+- **Coverage reports** with built-in coverage
+- **Watch mode** for development
+
+### End-to-End Testing with Playwright
+
+Playwright enables comprehensive E2E testing across multiple browsers:
+
+```tsx
+// tests/e2e/app.spec.ts
+import { test, expect } from '@playwright/test';
+
+test('app loads correctly', async ({ page }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle(/Electron/);
+  
+  // Test navigation
+  await page.click('text=About');
+  await expect(page).toHaveURL(/.*about/);
+});
+```
+
+**Features:**
+- **Multi-browser testing** (Chromium, Firefox, WebKit)
+- **Auto-wait** for elements and network requests
+- **Screenshots and videos** on test failures
+- **Trace viewer** for debugging
+- **Parallel execution** for faster test runs
+
+### Running Tests
+
+```bash
+# Unit tests
+npm run test              # Run once
+npm run test:watch        # Watch mode
+npm run test:ui           # Interactive UI
+npm run test:coverage     # With coverage
+
+# E2E tests
+npm run test:e2e          # Headless mode
+npm run test:e2e:ui       # Interactive mode
+npm run test:e2e:headed   # Visible browser
 ```
 
 ## 🎯 Adding New Components
