@@ -43,7 +43,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "tailwindcss": "^4.1.16",
-    "typescript": "^5.3.0",
+    "typescript": "^5.9.3",
     "vite": "npm:rolldown-vite@latest"
   },
   "dependencies": {
